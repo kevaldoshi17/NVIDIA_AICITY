@@ -31,7 +31,7 @@ To run model from scratch, please follow these steps:
 </p>
 
 -- Background Modelling
-1. Run 'python extract_frames.py' to extract frames from the videos with frequency set as 100. 
+1. Run `python extract_frames.py` to extract frames from the videos with frequency set as 100. 
 2. Run 'python extract_processed.py' to segment the processed images. 
 3. Run pretrained Yolo v3 model on the processed_images2 folder and save it as 'result.json'.
 
