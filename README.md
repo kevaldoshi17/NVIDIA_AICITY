@@ -32,15 +32,15 @@ To run model from scratch, please follow these steps:
 
 -- Background Modelling
 1. Run `python extract_frames.py` to extract frames from the videos with frequency set as 100. 
-2. Run 'python extract_processed.py' to segment the processed images. 
-3. Run pretrained Yolo v3 model on the processed_images2 folder and save it as 'result.json'.
+2. Run `python extract_processed.py` to segment the processed images. 
+3. Run pretrained Yolo v3 model on the processed_images2 folder and save it as `result.json`.
 
 -- Segmentation Maps
-1. Run 'python3 extract_frames.py' to extract frames from the videos with frequency set as 10.
-2. Run pretrained Yolo v3 model on the original_images folder and save it as 'part1.json'. To reduce complexity, we divided the task into two parts and saved it as part1.json and part2.json. 
-3. Run 'Seg_masks.py'. 
-4. Run 'python3 Masks/get_ignore_area.py'.
-5. Computed Segmentation Masks can be downloaded from [here]().
+1. Run `python3 extract_frames.py` to extract frames from the videos with frequency set as 10.
+2. Run pretrained Yolo v3 model on the original_images folder and save it as `part1.json`. To reduce complexity, we divided the task into two parts and saved it as part1.json and part2.json. 
+3. Run `Seg_masks.py`. 
+4. Run `python3 Masks/get_ignore_area.py`.
+5. Computed Segmentation Masks can be downloaded from [here](https://drive.google.com/file/d/15mcjQx02CQ4sgJ9k4UG718wwPpoGAlS4/view?usp=sharing).
 
 ### Pipeline 2
 <p align="center">
@@ -48,12 +48,24 @@ To run model from scratch, please follow these steps:
 </p>
 
 
-1. Run 'python3 Detector.py' and the results will be saved in 'Results.txt'.
+1. Run `python3 Detector.py` and the results will be saved in `Results.txt`.
 
 ### Pipeline 3
 <p align="center">
   <img width="480" height="320" src="Images/pipeline3.png">
 </p>
 
-Since it would take a considerable amount of time to run all the steps from scratch, we have also provided precalculated results. You can directly see the result by running 'python3 Detector.py' or see it on the Jupyter notebook 'Detector.ipynb'.
+Since it would take a considerable amount of time to run all the steps from scratch, we have also provided precalculated results. You can directly see the result by running 'python3 Detector.py' or see it on the Jupyter notebook `Detector.ipynb`.
 
+
+### Citation
+
+```
+@inproceedings{doshi2020fast,
+  title={Fast Unsupervised Anomaly Detection in Traffic Videos},
+  author={Doshi, Keval and Yilmaz, Yasin},
+  booktitle={Proc. CVPR Workshops, Seattle, WA, USA},
+  year={2020}
+}
+
+```
