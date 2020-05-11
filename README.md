@@ -20,7 +20,7 @@ Overview of the architecture of our anomaly detection framework, which consists 
 ### Requirements
 
 1. Python 3.6
-2. To run the model from scratch, request data from the organizers.
+2. To run the model from scratch, please request data from the organizers.
 3. Install Yolo-v3 from [here](https://github.com/AlexeyAB/darknet) and use pretrained model on MS-COCO.
 
 To run model from scratch, please follow these steps:
