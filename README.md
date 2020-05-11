@@ -14,7 +14,15 @@ The Track 4 of NVIDIA AI CITY 2020 comprised of detecting anomalies based on dif
 
 Detailed information of NVIDIA AICity Challenge 2020 can be found [here](https://www.aicitychallenge.org/).
 <p align="center">
-  <img width="460" height="300" src="Images/pipeline1.png">
+  <img width="480" height="320" src="Images/pipeline1.png">
+</p>
+
+<p align="center">
+  <img width="480" height="320" src="Images/pipeline2.png">
+</p>
+
+<p align="center">
+  <img width="480" height="320" src="Images/pipeline3.png">
 </p>
 
 
