@@ -10,28 +10,28 @@ import numpy as np
 root = "../Data/test-data/"
 dest_dir = "ori_images/"
 video_names = [str(i)+'.mp4' for i in range(1,101)]
-# print("caputure videos")
-# for video_name in tqdm.tqdm(video_names):
-#     file_name = video_name
-#     folder_name = dest_dir+file_name.split('.')[0]
-#     os.makedirs(folder_name,exist_ok=True)
-#     vc = cv2.VideoCapture(root+video_name)
-#     c = 1
-#     if vc.isOpened():
-#         rval, frame = vc.read()
-#     else:
-#         rval = False
+print("caputure videos")
+for video_name in tqdm.tqdm(video_names):
+    file_name = video_name
+    folder_name = dest_dir+file_name.split('.')[0]
+    os.makedirs(folder_name,exist_ok=True)
+    vc = cv2.VideoCapture(root+video_name)
+    c = 1
+    if vc.isOpened():
+        rval, frame = vc.read()
+    else:
+        rval = False
 
-#     timeF =100   
+    timeF =100   
 
-#     while rval: 
-#         rval, frame = vc.read()
-#         pic_path = folder_name+'/'
-#         if (c % timeF == 0): 
-#             cv2.imwrite(pic_path + str(c) + '.jpg', frame) 
-#         c = c + 1
-#         cv2.waitKey(1)
-#     vc.release()
+    while rval: 
+        rval, frame = vc.read()
+        pic_path = folder_name+'/'
+        if (c % timeF == 0): 
+            cv2.imwrite(pic_path + str(c) + '.jpg', frame) 
+        c = c + 1
+        cv2.waitKey(1)
+    vc.release()
 
 dest_dir_processed = "processed_images/"
 
