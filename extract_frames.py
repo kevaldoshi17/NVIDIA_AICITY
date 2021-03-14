@@ -1,16 +1,14 @@
 import cv2
 import os
-import sys
 import glob
 import tqdm
 from pathlib import Path
-from natsort import natsorted
 import numpy as np
-# video_name = sys.argv[1]
+
 root = "../Data/test-data/"
 dest_dir = "ori_images/"
 video_names = [str(i)+'.mp4' for i in range(1,101)]
-print("caputure videos")
+print("capture videos")
 for video_name in tqdm.tqdm(video_names):
     file_name = video_name
     folder_name = dest_dir+file_name.split('.')[0]
@@ -22,15 +20,15 @@ for video_name in tqdm.tqdm(video_names):
     else:
         rval = False
 
-    timeF =100   
+    timeF =100
+    pic_path = folder_name+'/'
 
     while rval: 
-        rval, frame = vc.read()
-        pic_path = folder_name+'/'
         if (c % timeF == 0): 
             cv2.imwrite(pic_path + str(c) + '.jpg', frame) 
         c = c + 1
         cv2.waitKey(1)
+        rval, frame = vc.read()
     vc.release()
 
 dest_dir_processed = "processed_images/"
