@@ -1,17 +1,13 @@
-from collections import Counter, defaultdict
+from collections import Counter
 from kneed import KneeLocator
 import numpy as np
 from sklearn.cluster import KMeans
 from natsort import natsorted
 import cv2
-import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import json
 import os
 from skimage import measure
 from scipy.signal import savgol_filter
-from matplotlib.patches import Rectangle
 
 
 

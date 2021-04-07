@@ -1,4 +1,3 @@
-import skimage
 from skimage.measure import label 
 from scipy.ndimage.filters import gaussian_filter
 import cv2
