@@ -1,6 +1,5 @@
 import os
 import cv2
-import numpy as np
 from natsort import natsorted
 
 base = "processed_images/"
