@@ -49,7 +49,7 @@ AT = extract_cases(All_Cords)
 
 Base = "processed_images/"
 if path.exists("change.npy"):
-    change_cam,loc,Cstat = np.load("change.npy")
+    change_cam,loc,Cstat = np.load("change.npy",allow_pickle=True)
 else:
     change_cam, loc,Cstat = change_detect(Base)
     np.save("change.npy",[change_cam,loc,Cstat])
@@ -158,7 +158,7 @@ Base = "ori_images/"
 
 
 if path.exists("result2.npy"):
-    Times2, Stat2 = np.load("result2.npy")
+    Times2, Stat2 = np.load("result2.npy",allow_pickle=True)
 else:
     Times2, Stat2 = backtrack1(Bounds2,Base)
     np.save("result2.npy",[Times2,Stat2])
