@@ -266,7 +266,7 @@ def extract_cases(All_Cords):
     maxes = list()
     for i in range(0,100):
 
-        T = np.array(All_Cords[i])
+        T = np.array(All_Cords[i], dtype=object)
         AT = [item for sublist in T for item in sublist]
         AT = np.array(np.array(AT)).reshape(-1,5)
 
