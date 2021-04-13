@@ -6,7 +6,7 @@ from natsort import natsorted
 import cv2
 import pandas as pd
 import os
-from skimage import measure
+from skimage import metrics
 from scipy.signal import savgol_filter
 
 
@@ -454,7 +454,7 @@ def change_detect(Base):
             img1 = cv2.imread(base2 + files[idx+10])
             sad = 0
             if np.sum(img1) != 0 and np.sum(img0) !=0:
-                sad = measure.compare_ssim(img0,img1,multichannel=True,win_size=3)
+                sad = metrics.structural_similarity(img0,img1,multichannel=True,win_size=3)
             else:
                 sad = 0.99
             stat.append(np.max((0,sad)))
@@ -490,7 +490,7 @@ def backtrack(Bounds, PT,Base):
                 img1 = cv2.imread(base2 + str(idx) +".jpg")[y-h:y+h,x-w:x+w]
                 img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
 
-                stat.append(measure.compare_ssim(img0,img1,multichannel=True,win_size=3))
+                stat.append(metrics.structural_similarity(img0,img1,multichannel=True,win_size=3))
 
 
             for idx in range(0,len(stat)-35):
@@ -541,7 +541,7 @@ def backtrack1(Bounds,Base):
             img1 = cv2.imread(base2 + str(idx) +".jpg")[y-h:y+h,x-w:x+w]
             img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
 
-            stat.append(measure.compare_ssim(img0,img1,multichannel=True,win_size=3))
+            stat.append(metrics.structural_similarity(img0,img1,multichannel=True,win_size=3))
 
 
         for idx in range(0,len(stat)-35):
