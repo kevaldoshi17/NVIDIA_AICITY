@@ -4,9 +4,9 @@
 # In[1]:
 
 
-import numpy as np
 import json
 
+import numpy as np
 
 # In[5]:
 

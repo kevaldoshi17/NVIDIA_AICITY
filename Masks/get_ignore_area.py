@@ -1,8 +1,7 @@
-from skimage.measure import label 
-from scipy.ndimage.filters import gaussian_filter
-import cv2
 import numpy as np
-import matplotlib.pyplot as plt
+from scipy.ndimage.filters import gaussian_filter
+from skimage.measure import label
+
 video_ids = np.arange(1,101)
 # video_ids = [1]
 count_thred = 0.02

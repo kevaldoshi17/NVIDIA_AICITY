@@ -23,6 +23,10 @@ Overview of the architecture of our anomaly detection framework, which consists 
 2. To run the model from scratch, please request data from the organizers.
 3. Install Yolo-v3 from [here](https://github.com/AlexeyAB/darknet) and use pretrained model on MS-COCO.
 
+Install the dependencies with the following command:
+```shell
+pip install -r requirements.txt
+```
 To run model from scratch, please follow these steps:
 
 ### Pipeline 1

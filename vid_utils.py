@@ -1,14 +1,13 @@
-from collections import Counter
-from kneed import KneeLocator
-import numpy as np
-from sklearn.cluster import KMeans
-from natsort import natsorted
-import cv2
-import pandas as pd
 import os
-from skimage import metrics
-from scipy.signal import savgol_filter
+from collections import Counter
 
+import cv2
+import numpy as np
+from kneed import KneeLocator
+from natsort import natsorted
+from scipy.signal import savgol_filter
+from skimage import metrics
+from sklearn.cluster import KMeans
 
 
 def Kmeans_clu(data,k):
