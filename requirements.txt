@@ -1,0 +1,8 @@
+numpy
+scipy
+scikit-image
+opencv-python
+kneed
+natsort
+scikit-learn
+tqdm
