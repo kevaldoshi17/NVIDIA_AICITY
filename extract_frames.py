@@ -1,9 +1,10 @@
-import cv2
-import os
 import glob
-import tqdm
+import os
 from pathlib import Path
+
+import cv2
 import numpy as np
+import tqdm
 
 root = "../Data/test-data/"
 dest_dir = "ori_images/"

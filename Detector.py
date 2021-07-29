@@ -4,20 +4,12 @@
 # In[1]:
 
 
-from collections import Counter, defaultdict
-from kneed import KneeLocator
-from sklearn.cluster import KMeans
-from matplotlib.patches import Rectangle
-from vid_utils import *
-
-import numpy as np 
-import cv2
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
 import json
 from os import path
 
+import numpy as np
+
+from vid_utils import *
 
 # In[2]:
 
